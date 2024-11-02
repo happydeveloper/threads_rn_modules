@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ThreadsProject</string>
+    <string name="facebook_app_id">1643316333067047</string><string name="facebook_client_token">43c87b1b0ec1af9682c2dd235ac8586b</string>
 </resources>

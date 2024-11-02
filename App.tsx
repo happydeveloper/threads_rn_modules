@@ -1,95 +1,100 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
+  // Alert,
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
-  View,
+  TextInput,
+  View, Alert
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  // in js
+  import { NativeModules } from 'react-native';
 
-type SectionProps = PropsWithChildren<{
+
+type SectionProps = {
   title: string;
-}>;
+  children: React.ReactNode;
+};
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+interface ThreadsTempCode {
+  code: string;
+};
+
+function Section({ children, title }: SectionProps): React.JSX.Element {
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+      <Text style={styles.sectionTitle}>{title}</Text>
+      <Text style={styles.sectionDescription}>{children}</Text>
     </View>
   );
 }
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const [userInput, setUserInput] = useState("");
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  function getUrlParams(urlString) {     
+    var params = {};  
+    
+    urlString.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+    	function(str, key, value) { 
+        	params[key] = value; 
+        }
+    );     
+    
+    return params; 
+}
+
+  // useEffect(() => {
+  //   Linking.addEventListener('url', async (e) => {
+  //     const searchParams = getUrlParams(e.url);
+  //     // const searchParams = new URLSearchParams(e.url);
+  //     // console.log(searchParams.getAll("code"));
+  //     // console.log(searchParams);
+  //     console.log("======== raw value ======")
+  //     console.log(e.url);
+  //     console.log("========")
+
+  //     const code = e.url.split('code=')[1];
+
+  //     // console.log(searchParams["code"]);
+
+  //     console.log("======== code =======")
+
+  //     console.log(code);
+
+  //     // const tempThreadsCode = searchParams["code"];
+  //     const resultFromAndroid = await NativeModules.ThreadsModule.shareThreads('userInput', code);
+      
+  //     console.log(resultFromAndroid);
+  //   });
+  // }, []);
+
+
+
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+    <SafeAreaView style={styles.backgroundStyle}>
+      <StatusBar barStyle="dark-content" backgroundColor={styles.backgroundStyle.backgroundColor} />
+      <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.backgroundStyle}>
+        <View style={styles.container}>
+          <Section title="Android Module - Cli">
+            <TextInput
+              style={styles.textInput}
+              value={userInput}
+              onChangeText={setUserInput}
+              placeholder="Enter text here"
+              placeholderTextColor="#888888"
+            />
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <Text>userInput: {userInput}</Text>
+          <Button onPress={async () => {
+              const code = await NativeModules.ThreadsModule.openShareThreadsWeb(userInput);
+            Alert.alert(code);
+          }} title="Share Threads" color="#f194ff" />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -97,6 +102,23 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
+  backgroundStyle: {
+    backgroundColor: "#f0f0f0", // 밝은 배경색
+    flex: 1,
+  },
+  container: {
+    backgroundColor: "#ffffff", // 컨테이너 배경색
+    padding: 20,
+  },
+  textInput: {
+    backgroundColor: "#ff22ff",
+    height: 40,
+    padding: 10,
+    borderRadius: 5,
+    marginVertical: 10,
+    fontSize: 16,
+    color: "#000000", // 텍스트 색상 (검은색)
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -104,14 +126,13 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+    color: "#000000", // 제목 색상 (검은색)
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+    color: "#333333", // 설명 텍스트 색상 (어두운 회색)
   },
 });
 

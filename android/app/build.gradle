@@ -116,4 +116,16 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // 레트로핏
+    def retrofit_version = "2.11.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    // gson 컨버터
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
+
+    // 레트로핏 로깅 인터셉터
+    implementation("com.squareup.okhttp3:logging-interceptor:4.8.1")
+
+    implementation("com.facebook.android:facebook-android-sdk:17.0.1")
+
 }
