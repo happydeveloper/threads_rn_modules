@@ -11,11 +11,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1DB4EC03D30F5F57E81DB90E /* libPods-ThreadsProject-ThreadsProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43945CD01B2FABB423D9A4AE /* libPods-ThreadsProject-ThreadsProjectTests.a */; };
 		561C82102855F49E0AEE32F2 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		6DDBA03089637293F65939D5 /* libPods-ThreadsProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3902C23DC1ADBC5BC0003D /* libPods-ThreadsProject.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B29D7A712CD5A487006CBFE2 /* ThreadsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B29D7A702CD5A487006CBFE2 /* ThreadsModule.m */; };
+		B2D8D4812CDEE5C10007E6AB /* NSURL+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D8D4802CDEE5C10007E6AB /* NSURL+Helpers.m */; };
+		BB6B05147643FF43271F9401 /* libPods-ThreadsProject-ThreadsProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2354F8468A2DF151B2939361 /* libPods-ThreadsProject-ThreadsProjectTests.a */; };
+		EF91374F32180E470CAFD327 /* libPods-ThreadsProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A24F097F0276F2B0074E41F /* libPods-ThreadsProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +40,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ThreadsProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ThreadsProject/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ThreadsProject/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		43945CD01B2FABB423D9A4AE /* libPods-ThreadsProject-ThreadsProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreadsProject-ThreadsProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2354F8468A2DF151B2939361 /* libPods-ThreadsProject-ThreadsProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreadsProject-ThreadsProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4709417F4B044346D3C67544 /* Pods-ThreadsProject-ThreadsProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadsProject-ThreadsProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-ThreadsProject-ThreadsProjectTests/Pods-ThreadsProject-ThreadsProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A24F097F0276F2B0074E41F /* libPods-ThreadsProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreadsProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65925F363532A8CDFF4294D1 /* Pods-ThreadsProject-ThreadsProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadsProject-ThreadsProjectTests.release.xcconfig"; path = "Target Support Files/Pods-ThreadsProject-ThreadsProjectTests/Pods-ThreadsProject-ThreadsProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ThreadsProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89A5B36B4E35EF5EA9B0F88D /* Pods-ThreadsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadsProject.release.xcconfig"; path = "Target Support Files/Pods-ThreadsProject/Pods-ThreadsProject.release.xcconfig"; sourceTree = "<group>"; };
-		8F3902C23DC1ADBC5BC0003D /* libPods-ThreadsProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreadsProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29D7A6F2CD5A412006CBFE2 /* ThreadsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadsModule.h; sourceTree = "<group>"; };
 		B29D7A702CD5A487006CBFE2 /* ThreadsModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadsModule.m; sourceTree = "<group>"; };
+		B2D8D47F2CDEE5C10007E6AB /* NSURL+Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Helpers.h"; sourceTree = "<group>"; };
+		B2D8D4802CDEE5C10007E6AB /* NSURL+Helpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Helpers.m"; sourceTree = "<group>"; };
 		D5B7F879485F2EC71D34E056 /* Pods-ThreadsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreadsProject.debug.xcconfig"; path = "Target Support Files/Pods-ThreadsProject/Pods-ThreadsProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -56,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DB4EC03D30F5F57E81DB90E /* libPods-ThreadsProject-ThreadsProjectTests.a in Frameworks */,
+				BB6B05147643FF43271F9401 /* libPods-ThreadsProject-ThreadsProjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DDBA03089637293F65939D5 /* libPods-ThreadsProject.a in Frameworks */,
+				EF91374F32180E470CAFD327 /* libPods-ThreadsProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 		13B07FAE1A68108700A75B9A /* ThreadsProject */ = {
 			isa = PBXGroup;
 			children = (
+				B2D8D47E2CDEE5740007E6AB /* Utils */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -108,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				8F3902C23DC1ADBC5BC0003D /* libPods-ThreadsProject.a */,
-				43945CD01B2FABB423D9A4AE /* libPods-ThreadsProject-ThreadsProjectTests.a */,
+				5A24F097F0276F2B0074E41F /* libPods-ThreadsProject.a */,
+				2354F8468A2DF151B2939361 /* libPods-ThreadsProject-ThreadsProjectTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,6 +147,15 @@
 				00E356EE1AD99517003FC87E /* ThreadsProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B2D8D47E2CDEE5740007E6AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2D8D47F2CDEE5C10007E6AB /* NSURL+Helpers.h */,
+				B2D8D4802CDEE5C10007E6AB /* NSURL+Helpers.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -207,7 +220,8 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -401,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D8D4812CDEE5C10007E6AB /* NSURL+Helpers.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B29D7A712CD5A487006CBFE2 /* ThreadsModule.m in Sources */,
@@ -558,6 +573,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -594,10 +610,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -638,6 +651,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -666,10 +680,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

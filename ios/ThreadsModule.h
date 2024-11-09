@@ -6,8 +6,8 @@
 //
 
 
-//#import <React/RCTBridgeModule.h>
-//@interface ThreadsModule: NSObject<RCTBridgeModule>
-//
-//@end
-//#endif /* ThreadsModule_h */
+#import <React/RCTBridgeModule.h>
+@interface ThreadsModule: NSObject<RCTBridgeModule>
+
+@end
+

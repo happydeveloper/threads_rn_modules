@@ -22,6 +22,9 @@ target 'ThreadsProject' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
+#  use_frameworks!
+#  pod 'Alamofire'
 
   target 'ThreadsProjectTests' do
     inherit! :complete
